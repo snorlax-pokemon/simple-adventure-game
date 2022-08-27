@@ -124,7 +124,7 @@ def main():
         elif command == "fight" and room == spider:
             room = fight_the_spider
             show_room = True 
-        elif command == "hit it agian" and room == fight_the_spider:
+        elif command == "hit it again" and room == fight_the_spider:
             room = 0
         else:
             print("Sorry I don't understand.")
