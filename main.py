@@ -61,9 +61,11 @@ def spider():
     """)
 
 def fight_the_spider():
-    print("""you stike you hit it once straight in the eyball boom it screams in pain and it swipes towards you,
+    print("""you stike you punch it once straight in the eyball boom it screams in pain and it swipes towards you,
     you can try to hit it again it or dodge it 
     """)
+
+
 
 def main():
     room = dark_tunnel
@@ -121,7 +123,7 @@ def main():
         elif command == "run" and room == spider:
             room = death
             show_room = True
-        elif command == "fight" and room == spider:
+        elif command in ("fight", "fight it") and room == spider:
             room = fight_the_spider
             show_room = True 
         elif command == "hit it again" and room == fight_the_spider:
