@@ -59,74 +59,77 @@ def spider():
     print("""You see giant cobwebs about three time your size until you find the producer there is a gigantic spider looking and you hungryly 
     you can fight it or run
     """)
+
 def fight_the_spider():
     print("""you stike you hit it once straight in the eyball boom it screams in pain and it swipes towards you,
     you can try to hit it again it or dodge it 
     """)
 
-room = dark_tunnel
-show_room = True
-finished = False
-while not finished:
-    if show_room:
-        room()
-        show_room = False
-    command = input("# ")
-    if command == "north" and room == dark_tunnel:
-        room = the_field
-        show_room = True
-    elif command == "help":
-        show_room = True  
-    elif command == "south" and room == the_field:
-        room = dark_tunnel  
-        show_room = True     
-    elif command == "east" and room == the_field:
-        room = bottom_of_mountain 
-        show_room = True  
-    elif command == "west" and room == bottom_of_mountain:
-        room = the_field
-        show_room = True    
-    elif command == "east" and room == bottom_of_mountain:
-        room = walking_up_the_mountain
-        show_room = True  
-    elif command == "west" and room == walking_up_the_mountain:
-        room = bottom_of_mountain
-        show_room = True  
-    elif command == "north" and room == walking_up_the_mountain:
-        room = cave
-        show_room = True  
-    elif command == "east" and room == walking_up_the_mountain:
-        room = waterfall
-        show_room = True  
-    elif command == "west" and room == waterfall:
-        room = walking_up_the_mountain
-        show_room = True 
-    elif command == "east" and room == waterfall:
-        room = cave2
-        show_room = True
-    elif command == "north" and room == cave:
-        room = monster_battle
-        show_room = True
-    elif command == "north" and room == cave2:
-        room = monster_battle
-        show_room = True
-    elif command == "run" and room == monster_battle:
-        room = death
-        show_room = True
-    elif command == "look behind me" and room == monster_battle:
-        room = spider
-        show_room = True
-    elif command == "run" and room == spider:
-        room = death
-        show_room = True
-    elif command == "fight" and room == spider 
-        room = fight_the_spider
-        show_room = True 
-    elif command == "hit it agian" and room == fight_the_spider
-        room = 
+def main():
+    room = dark_tunnel
+    show_room = True
+    finished = False
+    while not finished:
+        if show_room:
+            room()
+            show_room = False
+        command = input("# ")
+        if command == "north" and room == dark_tunnel:
+            room = the_field
+            show_room = True
+        elif command == "help":
+            show_room = True  
+        elif command == "south" and room == the_field:
+            room = dark_tunnel  
+            show_room = True     
+        elif command == "east" and room == the_field:
+            room = bottom_of_mountain 
+            show_room = True  
+        elif command == "west" and room == bottom_of_mountain:
+            room = the_field
+            show_room = True    
+        elif command == "east" and room == bottom_of_mountain:
+            room = walking_up_the_mountain
+            show_room = True  
+        elif command == "west" and room == walking_up_the_mountain:
+            room = bottom_of_mountain
+            show_room = True  
+        elif command == "north" and room == walking_up_the_mountain:
+            room = cave
+            show_room = True  
+        elif command == "east" and room == walking_up_the_mountain:
+            room = waterfall
+            show_room = True  
+        elif command == "west" and room == waterfall:
+            room = walking_up_the_mountain
+            show_room = True 
+        elif command == "east" and room == waterfall:
+            room = cave2
+            show_room = True
+        elif command == "north" and room == cave:
+            room = monster_battle
+            show_room = True
+        elif command == "north" and room == cave2:
+            room = monster_battle
+            show_room = True
+        elif command == "run" and room == monster_battle:
+            room = death
+            show_room = True
+        elif command == "look behind me" and room == monster_battle:
+            room = spider
+            show_room = True
+        elif command == "run" and room == spider:
+            room = death
+            show_room = True
+        elif command == "fight" and room == spider:
+            room = fight_the_spider
+            show_room = True 
+        elif command == "hit it agian" and room == fight_the_spider:
+            room = 0
+        else:
+            print("Sorry I don't understand.")
 
-    else:
-        print("Sorry I don't understand.")
-    
+if __name__ == "__main__":
+    main()    
     
     
